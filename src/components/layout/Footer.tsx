@@ -5,6 +5,7 @@
 import React from 'react';
 import { useTranslations, useLocale } from 'next-intl';
 import { Link } from '@/i18n/navigation';
+import Image from 'next/image';
 import { siteConfig, type Locale } from '@/config/site';
 
 export default function Footer() {
@@ -40,9 +41,22 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12">
           {/* Company Info */}
           <div className="lg:col-span-2">
-            <Link href="/" className="flex items-center gap-2 mb-4">
-              <div className="w-10 h-10 bg-gradient-to-br from-primary-500 to-primary-700 rounded-xl flex items-center justify-center text-white font-bold text-lg">
-                TV
+            <Link href="/" className="flex items-center gap-1 mb-4 group">
+              <div className="relative w-10 h-10 flex items-center justify-center  duration-200 overflow-hidden">
+                <div 
+                  className="absolute inset-0 bg-white"
+                  style={{
+                    maskImage: 'url("/logo.png")',
+                    maskSize: 'contain', 
+                    maskRepeat: 'no-repeat',
+                    maskPosition: 'center',
+                    WebkitMaskImage: 'url("/logo.png")',
+                    WebkitMaskSize: 'contain',
+                    WebkitMaskRepeat: 'no-repeat',
+                    WebkitMaskPosition: 'center',
+                    padding: '4px'
+                  }}
+                />
               </div>
               <span className="text-lg font-bold text-white">
                 {siteConfig.name[locale]}

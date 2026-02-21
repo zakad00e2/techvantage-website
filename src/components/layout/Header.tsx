@@ -7,6 +7,7 @@
 import React, { useState, useEffect } from 'react';
 import { useTranslations, useLocale } from 'next-intl';
 import { Link } from '@/i18n/navigation';
+import Image from 'next/image';
 import LanguageSwitcher from './LanguageSwitcher';
 import { siteConfig, type Locale } from '@/config/site';
 import { getServices } from '@/content/services';
@@ -52,9 +53,22 @@ export default function Header() {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 md:h-20">
           {/* Logo */}
-          <Link href="/" className="flex items-center gap-2 group">
-            <div className="w-10 h-10 bg-gradient-to-br from-primary-600 to-primary-800 rounded-xl flex items-center justify-center text-white font-bold text-lg shadow-md group-hover:shadow-lg transition-shadow">
-              TV
+          <Link href="/" className="flex items-center gap-1 group">
+            <div className="relative w-10 h-10 rounded-xl flex items-center justify-center   overflow-hidden">
+              <div 
+                className="absolute inset-0 bg-black"
+                style={{
+                  maskImage: 'url("/logo.png")',
+                  maskSize: 'contain', 
+                  maskRepeat: 'no-repeat',
+                  maskPosition: 'center',
+                  WebkitMaskImage: 'url("/logo.png")',
+                  WebkitMaskSize: 'contain',
+                  WebkitMaskRepeat: 'no-repeat',
+                  WebkitMaskPosition: 'center',
+                  padding: '4px'
+                }}
+              />
             </div>
             <span className="hidden sm:block text-lg font-bold text-neutral-900">
               {siteConfig.name[locale]}
@@ -118,7 +132,7 @@ export default function Header() {
 
           {/* Mobile Menu Toggle */}
           <button
-            className="lg:hidden p-2 rounded-lg hover:bg-neutral-100 transition-colors"
+            className="lg:hidden p-2 rounded-lg hover:bg-neutral-100 transition-colors cursor-pointer"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             aria-label="Toggle menu"
           >

@@ -34,7 +34,7 @@ export default function PricingToggle({ plans, locale }: PricingToggleProps) {
         </span>
         <button
           onClick={() => setAnnual(!annual)}
-          className={`relative w-14 h-7 rounded-full transition-colors ${
+          className={`relative w-14 h-7 rounded-full transition-colors cursor-pointer ${
             annual ? 'bg-primary-600' : 'bg-neutral-300'
           }`}
         >

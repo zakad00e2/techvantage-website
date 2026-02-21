@@ -1,4 +1,4 @@
-# TechVantage Solutions — Corporate Website
+# VantageTech Solutions — Corporate Website
 
 A production-ready, bilingual (English + Arabic RTL) corporate website for a technology company that provides general digital services and offers **LegalEdge Pro**, a specialized legal office management system, as a standalone product.
 
@@ -255,7 +255,7 @@ For production, update these values in `src/config/site.ts`:
 
 | Variable | Description |
 |---|---|
-| `siteConfig.url` | Your production domain (currently `https://techvantage.com`) |
+| `siteConfig.url` | Your production domain (currently `https://vantagetech.com`) |
 | `siteConfig.contact.email` | Contact email |
 | `siteConfig.contact.phone` | Contact phone |
 | `siteConfig.social.*` | Social media links |

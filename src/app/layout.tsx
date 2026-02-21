@@ -6,7 +6,7 @@ import "./globals.css";
  * The actual HTML structure is in [locale]/layout.tsx.
  */
 export const metadata: Metadata = {
-  title: "TechVantage Solutions",
+  title: "VantageTech Solutions",
   description: "Enterprise digital solutions and legal office management systems",
 };
 

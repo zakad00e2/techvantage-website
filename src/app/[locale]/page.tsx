@@ -97,7 +97,7 @@ export default function HomePage() {
                 </p>
                 <div className="mt-4 inline-flex items-center text-primary-600 font-semibold text-sm group-hover:gap-2 transition-all">
                   {tn('learnMore')}
-                  <svg className="w-4 h-4 ms-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <svg className="w-4 h-4 ms-1 rtl:rotate-180 transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                   </svg>
                 </div>

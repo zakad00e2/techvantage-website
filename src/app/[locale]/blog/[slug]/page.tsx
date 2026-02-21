@@ -67,7 +67,7 @@ function ArticlePageContent({ article }: { article: NonNullable<ReturnType<typeo
         <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
           <Link
             href="/blog"
-            className="inline-flex items-center text-white/70 hover:text-white text-sm mb-6 transition-colors"
+            className="flex items-center text-white/70 hover:text-white text-sm mb-6 transition-colors w-fit"
           >
             <svg className="w-4 h-4 me-1 rtl:rotate-180" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />

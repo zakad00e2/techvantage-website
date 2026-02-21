@@ -23,9 +23,9 @@ export default function PrivacyPage() {
         { title: 'مشاركة المعلومات', content: 'لا نبيع أو نؤجر أو نتاجر بمعلوماتك الشخصية مع أطراف ثالثة. قد نشارك معلوماتك مع مقدمي الخدمات الموثوقين الذين يساعدوننا في تشغيل أعمالنا، شريطة أن يوافقوا على الحفاظ على سرية هذه المعلومات.' },
         { title: 'أمان البيانات', content: 'نتخذ تدابير أمنية معقولة لحماية معلوماتك الشخصية من الفقدان والسرقة والوصول غير المصرح به والإفصاح والتعديل والتدمير. نستخدم تشفير SSL ونتبع أفضل الممارسات الصناعية لأمان البيانات.' },
         { title: 'ملفات تعريف الارتباط', content: 'نستخدم ملفات تعريف الارتباط وتقنيات تتبع مماثلة لتتبع النشاط على موقعنا وحفظ معلومات معينة. يمكنك توجيه متصفحك لرفض جميع ملفات تعريف الارتباط أو للإشارة عند إرسال ملف تعريف ارتباط.' },
-        { title: 'حقوقك', content: 'لديك الحق في الوصول إلى معلوماتك الشخصية وتصحيحها وحذفها. يمكنك أيضاً الانسحاب من تلقي الاتصالات التسويقية في أي وقت. لممارسة هذه الحقوق، يرجى الاتصال بنا على info@techvantage.com.' },
+        { title: 'حقوقك', content: 'لديك الحق في الوصول إلى معلوماتك الشخصية وتصحيحها وحذفها. يمكنك أيضاً الانسحاب من تلقي الاتصالات التسويقية في أي وقت. لممارسة هذه الحقوق، يرجى الاتصال بنا على info@vantagetech.com.' },
         { title: 'التغييرات على هذه السياسة', content: 'قد نقوم بتحديث سياسة الخصوصية هذه من وقت لآخر. سننشر أي تغييرات على هذه الصفحة ونحدث تاريخ "آخر تحديث" في أعلى هذه السياسة.' },
-        { title: 'اتصل بنا', content: 'إذا كانت لديك أسئلة حول سياسة الخصوصية هذه، يرجى الاتصال بنا على info@techvantage.com.' },
+        { title: 'اتصل بنا', content: 'إذا كانت لديك أسئلة حول سياسة الخصوصية هذه، يرجى الاتصال بنا على info@vantagetech.com.' },
       ]
     : [
         { title: 'Information We Collect', content: 'We collect information you provide directly to us, such as your name, email address, and contact information when you fill out a contact form or register for our services. We also automatically collect certain information when you visit our website, including your IP address, browser type, and pages visited.' },
@@ -33,9 +33,9 @@ export default function PrivacyPage() {
         { title: 'Information Sharing', content: 'We do not sell, rent, or trade your personal information with third parties. We may share your information with trusted service providers who assist us in operating our business, subject to their agreement to maintain the confidentiality of such information.' },
         { title: 'Data Security', content: 'We take reasonable security measures to protect your personal information from loss, theft, unauthorized access, disclosure, alteration, and destruction. We use SSL encryption and follow industry best practices for data security.' },
         { title: 'Cookies', content: 'We use cookies and similar tracking technologies to track activity on our website and hold certain information. You can instruct your browser to refuse all cookies or to indicate when a cookie is being sent.' },
-        { title: 'Your Rights', content: 'You have the right to access, correct, and delete your personal information. You can also opt out of receiving marketing communications at any time. To exercise these rights, please contact us at info@techvantage.com.' },
+        { title: 'Your Rights', content: 'You have the right to access, correct, and delete your personal information. You can also opt out of receiving marketing communications at any time. To exercise these rights, please contact us at info@vantagetech.com.' },
         { title: 'Changes to This Policy', content: 'We may update this privacy policy from time to time. We will post any changes on this page and update the "last updated" date at the top of this policy.' },
-        { title: 'Contact Us', content: 'If you have questions about this privacy policy, please contact us at info@techvantage.com.' },
+        { title: 'Contact Us', content: 'If you have questions about this privacy policy, please contact us at info@vantagetech.com.' },
       ];
 
   return (

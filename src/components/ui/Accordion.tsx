@@ -46,7 +46,7 @@ export default function Accordion({
           <div key={item.id}>
             <button
               onClick={() => toggle(item.id)}
-              className="w-full flex items-center justify-between py-5 px-1 text-left group"
+              className="w-full flex items-center justify-between py-5 px-1 text-left group cursor-pointer"
               aria-expanded={isOpen}
             >
               <span className="text-lg font-semibold text-neutral-900 group-hover:text-primary-600 transition-colors">

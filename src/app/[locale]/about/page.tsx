@@ -50,7 +50,7 @@ export default function AboutPage() {
   ];
 
   const timeline = [
-    { year: '2018', title: locale === 'ar' ? 'التأسيس' : 'Founded', desc: locale === 'ar' ? 'تأسست تك فانتج في الرياض مع فريق من 5 خبراء.' : 'TechVantage founded in Riyadh with a team of 5 experts.' },
+    { year: '2018', title: locale === 'ar' ? 'التأسيس' : 'Founded', desc: locale === 'ar' ? 'تأسست فانتج تك في الرياض مع فريق من 5 خبراء.' : 'VantageTech founded in Riyadh with a team of 5 experts.' },
     { year: '2019', title: locale === 'ar' ? 'أول 50 عميل' : 'First 50 Clients', desc: locale === 'ar' ? 'وصلنا إلى 50 عميل مؤسسي وتوسعنا إلى 25 موظفاً.' : 'Reached 50 enterprise clients and grew to 25 employees.' },
     { year: '2021', title: locale === 'ar' ? 'إطلاق ليجال إيدج' : 'LegalEdge Launch', desc: locale === 'ar' ? 'أطلقنا نظام ليجال إيدج برو لإدارة المكاتب القانونية.' : 'Launched LegalEdge Pro legal office management system.' },
     { year: '2023', title: locale === 'ar' ? 'التوسع الإقليمي' : 'Regional Expansion', desc: locale === 'ar' ? 'توسعنا إلى الإمارات والبحرين والكويت مع أكثر من 200 عميل.' : 'Expanded to UAE, Bahrain, and Kuwait with 200+ clients.' },

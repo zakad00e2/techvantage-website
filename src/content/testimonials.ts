@@ -21,8 +21,8 @@ const testimonials: Testimonial[] = [
     role: { en: 'CTO', ar: 'الرئيس التنفيذي للتقنية' },
     company: { en: 'National Logistics Corp', ar: 'شركة الخدمات اللوجستية الوطنية' },
     quote: {
-      en: 'TechVantage transformed our entire IT infrastructure. Their cloud migration reduced our operational costs by 40% while dramatically improving system reliability.',
-      ar: 'حوّلت تك فانتج بنيتنا التحتية بالكامل. خفضت الهجرة السحابية تكاليفنا التشغيلية بنسبة 40% مع تحسين موثوقية النظام بشكل كبير.',
+      en: 'VantageTech transformed our entire IT infrastructure. Their cloud migration reduced our operational costs by 40% while dramatically improving system reliability.',
+      ar: 'حوّلت فانتج تك بنيتنا التحتية بالكامل. خفضت الهجرة السحابية تكاليفنا التشغيلية بنسبة 40% مع تحسين موثوقية النظام بشكل كبير.',
     },
     avatar: '/images/testimonials/khalid.jpg',
     rating: 5,
@@ -47,8 +47,8 @@ const testimonials: Testimonial[] = [
     role: { en: 'CEO', ar: 'الرئيس التنفيذي' },
     company: { en: 'Riyadh Commercial Group', ar: 'مجموعة الرياض التجارية' },
     quote: {
-      en: 'Working with TechVantage on our digital transformation was a game-changer. They understood our business needs and delivered solutions that exceeded expectations.',
-      ar: 'كان العمل مع تك فانتج في تحولنا الرقمي نقلة نوعية. فهموا احتياجات أعمالنا وقدموا حلولاً تجاوزت التوقعات.',
+      en: 'Working with VantageTech on our digital transformation was a game-changer. They understood our business needs and delivered solutions that exceeded expectations.',
+      ar: 'كان العمل مع فانتج تك في تحولنا الرقمي نقلة نوعية. فهموا احتياجات أعمالنا وقدموا حلولاً تجاوزت التوقعات.',
     },
     avatar: '/images/testimonials/mohammed.jpg',
     rating: 5,
@@ -73,8 +73,8 @@ const testimonials: Testimonial[] = [
     role: { en: 'IT Director', ar: 'مدير تقنية المعلومات' },
     company: { en: 'Gulf Healthcare Network', ar: 'شبكة الخليج للرعاية الصحية' },
     quote: {
-      en: 'The cybersecurity audit and implementation by TechVantage was thorough and professional. Our security posture improved dramatically.',
-      ar: 'كان تدقيق وتنفيذ الأمن السيبراني من تك فانتج شاملاً ومحترفاً. تحسن وضعنا الأمني بشكل كبير.',
+      en: 'The cybersecurity audit and implementation by VantageTech was thorough and professional. Our security posture improved dramatically.',
+      ar: 'كان تدقيق وتنفيذ الأمن السيبراني من فانتج تك شاملاً ومحترفاً. تحسن وضعنا الأمني بشكل كبير.',
     },
     avatar: '/images/testimonials/tariq.jpg',
     rating: 5,

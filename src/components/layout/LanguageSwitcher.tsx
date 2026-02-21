@@ -21,7 +21,7 @@ export default function LanguageSwitcher({ label }: { label: string }) {
   return (
     <button
       onClick={switchLocale}
-      className="inline-flex items-center gap-1.5 px-3 py-1.5 text-sm font-medium rounded-lg
+      className="inline-flex items-center gap-1.5 px-3 py-1.5 text-sm font-medium rounded-lg cursor-pointer
                  border border-neutral-300 hover:bg-neutral-100 transition-colors duration-200
                  text-neutral-700 hover:text-primary-600"
       aria-label="Switch language"
