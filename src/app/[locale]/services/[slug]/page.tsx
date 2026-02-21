@@ -15,7 +15,14 @@ import type { Metadata } from 'next';
  * Generate static paths for all services.
  */
 export function generateStaticParams() {
-  return getServices().map((s) => ({ slug: s.slug }));
+  const services = getServices();
+  const locales = ['ar', 'en'];
+  return locales.flatMap((locale) => 
+    services.map((service) => ({
+      locale,
+      slug: service.slug
+    }))
+  );
 }
 
 /**

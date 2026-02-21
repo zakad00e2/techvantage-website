@@ -4,7 +4,7 @@
  * header, footer, and internationalization provider.
  */
 import React from 'react';
-import { NextIntlClientProvider, hasLocale } from 'next-intl';
+import { NextIntlClientProvider } from 'next-intl';
 import { getMessages } from 'next-intl/server';
 import { notFound } from 'next/navigation';
 import { routing } from '@/i18n/routing';
@@ -18,6 +18,13 @@ type Props = {
   children: React.ReactNode;
   params: Promise<{ locale: string }>;
 };
+
+/**
+ * Generate static params for locales at build time.
+ */
+export function generateStaticParams() {
+  return routing.locales.map((locale) => ({ locale }));
+}
 
 /**
  * Dynamic metadata per locale.
@@ -71,7 +78,7 @@ export default async function LocaleLayout({ children, params }: Props) {
   const { locale } = await params;
 
   // Validate locale
-  if (!hasLocale(routing.locales, locale)) {
+  if (!routing.locales.includes(locale as any)) {
     notFound();
   }
 

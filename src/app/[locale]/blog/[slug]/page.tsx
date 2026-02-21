@@ -15,7 +15,14 @@ import type { Metadata } from 'next';
  * Generate static paths for all articles.
  */
 export function generateStaticParams() {
-  return getArticles().map((a) => ({ slug: a.slug }));
+  const articles = getArticles();
+  const locales = ['ar', 'en'];
+  return locales.flatMap((locale) => 
+    articles.map((article) => ({
+      locale,
+      slug: article.slug
+    }))
+  );
 }
 
 /**
