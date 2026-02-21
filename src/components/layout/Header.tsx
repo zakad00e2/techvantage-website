@@ -50,11 +50,11 @@ export default function Header() {
           : 'bg-white/80 backdrop-blur-sm'
       }`}
     >
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div className="mx-auto max-w-7xl px-7 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 md:h-20">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-1 group">
-            <div className="relative w-10 h-10 rounded-xl flex items-center justify-center   overflow-hidden">
+            <div className="relative w-10 h-10  flex items-center justify-center">
               <div 
                 className="absolute inset-0 bg-black"
                 style={{
