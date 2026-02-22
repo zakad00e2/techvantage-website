@@ -5,7 +5,7 @@
 import React from 'react';
 import { useTranslations, useLocale } from 'next-intl';
 import { Link } from '@/i18n/navigation';
-import { Section, SectionHeader, Card, Button } from '@/components/ui';
+import { Section, SectionHeader, Card, Button, Icon } from '@/components/ui';
 import { getServices } from '@/content/services';
 import type { Locale } from '@/config/site';
 import type { Metadata } from 'next';
@@ -38,7 +38,7 @@ export default function ServicesPage() {
           {services.map((service) => (
             <Link key={service.slug} href={`/services/${service.slug}`}>
               <Card hover padding="lg" className="h-full group">
-                <span className="text-4xl block mb-4">{service.icon}</span>
+                <Icon name={service.icon} size={40} className="text-primary-600 mb-4" />
                 <h2 className="text-xl font-bold text-neutral-900 group-hover:text-primary-600 transition-colors">
                   {service.title[locale]}
                 </h2>
