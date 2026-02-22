@@ -5,7 +5,7 @@
 import React from 'react';
 import { useTranslations, useLocale } from 'next-intl';
 import { Link } from '@/i18n/navigation';
-import { Section, SectionHeader, Card, Badge } from '@/components/ui';
+import { Section, SectionHeader, Card, Badge, Icon } from '@/components/ui';
 import { getArticles } from '@/content/articles';
 import type { Locale } from '@/config/site';
 import type { Metadata } from 'next';
@@ -38,7 +38,7 @@ export default function BlogPage() {
             <Link key={article.slug} href={`/blog/${article.slug}`}>
               <Card hover padding="none" className="h-full group overflow-hidden">
                 <div className="h-48 bg-gradient-to-br from-primary-100 to-primary-200 flex items-center justify-center">
-                  <span className="text-6xl opacity-50">📝</span>
+                  <Icon name="file-text" size={56} className="opacity-50 text-primary-600" />
                 </div>
                 <div className="p-6">
                   <div className="flex items-center gap-2 mb-3">

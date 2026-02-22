@@ -17,7 +17,7 @@ export interface Service {
 const services: Service[] = [
   {
     slug: 'custom-software-development',
-    icon: '💻',
+    icon: 'monitor',
     title: {
       en: 'Custom Software Development',
       ar: 'تطوير البرمجيات المخصصة',
@@ -53,7 +53,7 @@ const services: Service[] = [
   },
   {
     slug: 'cloud-infrastructure',
-    icon: '☁️',
+    icon: 'cloud',
     title: {
       en: 'Cloud Infrastructure & DevOps',
       ar: 'البنية التحتية السحابية و DevOps',
@@ -89,7 +89,7 @@ const services: Service[] = [
   },
   {
     slug: 'cybersecurity',
-    icon: '🔒',
+    icon: 'shield',
     title: {
       en: 'Cybersecurity Solutions',
       ar: 'حلول الأمن السيبراني',
@@ -125,7 +125,7 @@ const services: Service[] = [
   },
   {
     slug: 'data-analytics',
-    icon: '📊',
+    icon: 'bar-chart-2',
     title: {
       en: 'Data Analytics & AI',
       ar: 'تحليلات البيانات والذكاء الاصطناعي',
@@ -161,7 +161,7 @@ const services: Service[] = [
   },
   {
     slug: 'digital-transformation',
-    icon: '🚀',
+    icon: 'rocket',
     title: {
       en: 'Digital Transformation Consulting',
       ar: 'استشارات التحول الرقمي',
@@ -197,7 +197,7 @@ const services: Service[] = [
   },
   {
     slug: 'ux-ui-design',
-    icon: '🎨',
+    icon: 'palette',
     title: {
       en: 'UX/UI Design',
       ar: 'تصميم تجربة وواجهة المستخدم',

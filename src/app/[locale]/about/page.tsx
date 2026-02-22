@@ -4,7 +4,7 @@
  */
 import React from 'react';
 import { useTranslations, useLocale } from 'next-intl';
-import { Section, SectionHeader, Card } from '@/components/ui';
+import { Section, SectionHeader, Card, Icon } from '@/components/ui';
 import { getTeamMembers } from '@/content/team';
 import type { Locale } from '@/config/site';
 import type { Metadata } from 'next';
@@ -20,28 +20,28 @@ export default function AboutPage() {
 
   const values = [
     {
-      icon: '💡',
+      icon: 'lightbulb',
       title: locale === 'ar' ? 'الابتكار' : 'Innovation',
       desc: locale === 'ar'
         ? 'نبحث دائماً عن طرق أفضل وأذكى لحل المشكلات المعقدة.'
         : 'We constantly seek better, smarter ways to solve complex problems.',
     },
     {
-      icon: '🤝',
+      icon: 'handshake',
       title: locale === 'ar' ? 'الشراكة' : 'Partnership',
       desc: locale === 'ar'
         ? 'نعمل كامتداد لفريقك، ملتزمون بنجاحك على المدى الطويل.'
         : 'We operate as an extension of your team, committed to your long-term success.',
     },
     {
-      icon: '⭐',
+      icon: 'star',
       title: locale === 'ar' ? 'التميز' : 'Excellence',
       desc: locale === 'ar'
         ? 'نلتزم بأعلى معايير الجودة في كل ما نقدمه.'
         : 'We hold ourselves to the highest standards of quality in everything we deliver.',
     },
     {
-      icon: '🔒',
+      icon: 'shield-check',
       title: locale === 'ar' ? 'النزاهة' : 'Integrity',
       desc: locale === 'ar'
         ? 'نعمل بشفافية ونزاهة في كل تعامل مع عملائنا وشركائنا.'
@@ -74,13 +74,13 @@ export default function AboutPage() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
           <div className="p-8 bg-primary-50 rounded-2xl border border-primary-100">
             <h2 className="text-2xl font-bold text-neutral-900 mb-4 flex items-center gap-3">
-              <span className="text-3xl">🎯</span> {t('missionTitle')}
+              <Icon name="target" size={28} className="text-primary-600" /> {t('missionTitle')}
             </h2>
             <p className="text-neutral-700 leading-relaxed text-lg">{t('missionText')}</p>
           </div>
           <div className="p-8 bg-secondary-50 rounded-2xl border border-secondary-100">
             <h2 className="text-2xl font-bold text-neutral-900 mb-4 flex items-center gap-3">
-              <span className="text-3xl">🔭</span> {t('visionTitle')}
+              <Icon name="telescope" size={28} className="text-secondary-600" /> {t('visionTitle')}
             </h2>
             <p className="text-neutral-700 leading-relaxed text-lg">{t('visionText')}</p>
           </div>
@@ -93,7 +93,7 @@ export default function AboutPage() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {values.map((value) => (
             <Card key={value.title} padding="lg" className="text-center">
-              <span className="text-4xl block mb-4">{value.icon}</span>
+              <Icon name={value.icon} size={40} className="text-primary-600 mb-4 mx-auto" />
               <h3 className="text-lg font-bold text-neutral-900">{value.title}</h3>
               <p className="mt-2 text-neutral-600 text-sm">{value.desc}</p>
             </Card>

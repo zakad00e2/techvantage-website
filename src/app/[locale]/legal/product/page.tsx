@@ -6,7 +6,7 @@
 import React from 'react';
 import { useTranslations, useLocale } from 'next-intl';
 import { Link } from '@/i18n/navigation';
-import { Section, SectionHeader, Card, Button, Badge } from '@/components/ui';
+import { Section, SectionHeader, Card, Button, Badge, Icon } from '@/components/ui';
 import { getPricingPlans } from '@/content/pricing';
 import { getTestimonials } from '@/content/testimonials';
 import { getFAQs } from '@/content/faq';
@@ -31,42 +31,42 @@ export default function LegalProductPage() {
   /* Features data */
   const features = [
     {
-      icon: '📋',
+      icon: 'clipboard-list',
       title: locale === 'ar' ? 'إدارة القضايا' : 'Case Management',
       desc: locale === 'ar'
         ? 'تتبع كل قضية من القبول حتى الإغلاق مع جداول زمنية وملاحظات ومهام آلية.'
         : 'Track every case from intake to closure with timelines, notes, and automated tasks.',
     },
     {
-      icon: '📄',
+      icon: 'file-text',
       title: locale === 'ar' ? 'أتمتة المستندات' : 'Document Automation',
       desc: locale === 'ar'
         ? 'أنشئ العقود والمذكرات والمستندات القانونية في ثوانٍ باستخدام قوالب ذكية.'
         : 'Generate contracts, memos, and legal documents in seconds with smart templates.',
     },
     {
-      icon: '⏱️',
+      icon: 'timer',
       title: locale === 'ar' ? 'تتبع الوقت والفوترة' : 'Time & Billing',
       desc: locale === 'ar'
         ? 'تتبع الوقت تلقائياً مع فوترة مرنة ومحاسبة أمانات ودفع إلكتروني.'
         : 'Automatic time tracking with flexible billing, trust accounting, and online payments.',
     },
     {
-      icon: '👥',
+      icon: 'users',
       title: locale === 'ar' ? 'بوابة العملاء' : 'Client Portal',
       desc: locale === 'ar'
         ? 'بوابة آمنة للعملاء لمتابعة قضاياهم وتبادل المستندات والتواصل.'
         : 'Secure client portal for case updates, document sharing, and communication.',
     },
     {
-      icon: '📅',
+      icon: 'calendar',
       title: locale === 'ar' ? 'التقويم والمواعيد' : 'Calendar & Deadlines',
       desc: locale === 'ar'
         ? 'لا تفوت أي موعد نهائي مع تقويم متكامل وتنبيهات ذكية ومزامنة.'
         : 'Never miss a deadline with integrated calendar, smart alerts, and sync capabilities.',
     },
     {
-      icon: '📊',
+      icon: 'bar-chart-2',
       title: locale === 'ar' ? 'التحليلات والتقارير' : 'Analytics & Reports',
       desc: locale === 'ar'
         ? 'لوحات تحليلية تفاعلية لقياس الأداء وتحسين الإنتاجية وزيادة الإيرادات.'
@@ -130,7 +130,7 @@ export default function LegalProductPage() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
               <Badge variant="secondary" size="md" className="mb-6">
-                ⚖️ {t('productName')}
+                <Icon name="scale" size={16} className="inline-block me-1 align-text-bottom" /> {t('productName')}
               </Badge>
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight">
                 {t('heroTitle')}
@@ -154,7 +154,7 @@ export default function LegalProductPage() {
               <div className="bg-white/10 backdrop-blur-sm rounded-2xl border border-white/20 p-4 shadow-2xl">
                 <div className="bg-neutral-900/80 rounded-xl aspect-[4/3] flex items-center justify-center">
                   <div className="text-center p-8">
-                    <span className="text-6xl block mb-4">⚖️</span>
+                    <Icon name="scale" size={56} className="text-white/80 mb-4" />
                     <p className="text-white/80 font-medium">{t('productName')}</p>
                     <p className="text-white/50 text-sm mt-1">{locale === 'ar' ? 'واجهة لوحة التحكم' : 'Dashboard Interface'}</p>
                   </div>
@@ -183,7 +183,7 @@ export default function LegalProductPage() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {features.map((feature) => (
             <Card key={feature.title} padding="lg" hover>
-              <span className="text-4xl block mb-4">{feature.icon}</span>
+              <Icon name={feature.icon} size={40} className="text-primary-600 mb-4" />
               <h3 className="text-lg font-bold text-neutral-900">{feature.title}</h3>
               <p className="mt-2 text-neutral-600">{feature.desc}</p>
             </Card>
@@ -210,15 +210,15 @@ export default function LegalProductPage() {
         <SectionHeader title={t('screenshotsTitle')} subtitle={t('screenshotsSubtitle')} />
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {[
-            { label: locale === 'ar' ? 'لوحة التحكم' : 'Dashboard', icon: '📊' },
-            { label: locale === 'ar' ? 'إدارة القضايا' : 'Case Management', icon: '📋' },
-            { label: locale === 'ar' ? 'أتمتة المستندات' : 'Document Builder', icon: '📄' },
-            { label: locale === 'ar' ? 'الفوترة' : 'Billing', icon: '💰' },
+            { label: locale === 'ar' ? 'لوحة التحكم' : 'Dashboard', icon: 'bar-chart-2' },
+            { label: locale === 'ar' ? 'إدارة القضايا' : 'Case Management', icon: 'clipboard-list' },
+            { label: locale === 'ar' ? 'أتمتة المستندات' : 'Document Builder', icon: 'file-text' },
+            { label: locale === 'ar' ? 'الفوترة' : 'Billing', icon: 'dollar-sign' },
           ].map((screenshot) => (
             <div key={screenshot.label} className="group">
               <div className="bg-neutral-100 rounded-2xl aspect-video flex items-center justify-center border border-neutral-200 group-hover:border-primary-300 transition-colors overflow-hidden">
                 <div className="text-center">
-                  <span className="text-5xl block mb-3">{screenshot.icon}</span>
+                  <Icon name={screenshot.icon} size={48} className="text-primary-600 mb-3" />
                   <p className="text-neutral-500 font-medium">{screenshot.label}</p>
                 </div>
               </div>

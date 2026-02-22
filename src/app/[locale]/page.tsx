@@ -5,7 +5,7 @@
 import React from 'react';
 import { useTranslations, useLocale } from 'next-intl';
 import { Link } from '@/i18n/navigation';
-import { Section, SectionHeader, Card, Button, Badge } from '@/components/ui';
+import { Section, SectionHeader, Card, Button, Badge, Icon } from '@/components/ui';
 import { getServices } from '@/content/services';
 import { getArticles } from '@/content/articles';
 import { getTestimonials } from '@/content/testimonials';
@@ -31,7 +31,7 @@ export default function HomePage() {
         <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-24 md:py-32 lg:py-40">
           <div className="max-w-4xl">
             <Badge variant="secondary" size="md" className="mb-6">
-              🚀 {locale === 'ar' ? 'حلول رقمية متكاملة' : 'Enterprise Digital Solutions'}
+              <Icon name="rocket" size={16} className="inline-block me-1 align-text-bottom" /> {locale === 'ar' ? 'حلول رقمية متكاملة' : 'Enterprise Digital Solutions'}
             </Badge>
             <h1 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-extrabold leading-tight tracking-tight">
               {t('heroTitle')}
@@ -88,7 +88,7 @@ export default function HomePage() {
           {services.map((service) => (
             <Link key={service.slug} href={`/services/${service.slug}`}>
               <Card hover padding="lg" className="h-full group">
-                <span className="text-4xl block mb-4">{service.icon}</span>
+                <Icon name={service.icon} size={40} className="text-primary-600 mb-4" />
                 <h3 className="text-xl font-bold text-neutral-900 group-hover:text-primary-600 transition-colors">
                   {service.title[locale]}
                 </h3>
@@ -113,42 +113,42 @@ export default function HomePage() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {[
             {
-              icon: '🏆',
+              icon: 'trophy',
               title: locale === 'ar' ? 'خبرة مثبتة' : 'Proven Expertise',
               desc: locale === 'ar'
                 ? 'أكثر من 8 سنوات من الخبرة في تقديم حلول تقنية على مستوى المؤسسات عبر صناعات متعددة.'
                 : '8+ years delivering enterprise-grade technology solutions across multiple industries.',
             },
             {
-              icon: '🔧',
+              icon: 'wrench',
               title: locale === 'ar' ? 'حلول مخصصة' : 'Tailored Solutions',
               desc: locale === 'ar'
                 ? 'كل حل مصمم وفقاً لاحتياجات عملك الفريدة، وليس حزماً جاهزة.'
                 : 'Every solution is custom-built for your unique business needs, not off-the-shelf packages.',
             },
             {
-              icon: '🤝',
+              icon: 'handshake',
               title: locale === 'ar' ? 'دعم مستمر' : 'Ongoing Support',
               desc: locale === 'ar'
                 ? 'شراكة طويلة الأمد مع دعم مخصص ومراقبة استباقية وتحسين مستمر.'
                 : 'Long-term partnership with dedicated support, proactive monitoring, and continuous improvement.',
             },
             {
-              icon: '🔒',
+              icon: 'shield',
               title: locale === 'ar' ? 'الأمان أولاً' : 'Security First',
               desc: locale === 'ar'
                 ? 'أمان وامتثال على مستوى المؤسسات مدمج في كل حل نقدمه.'
                 : 'Enterprise-grade security and compliance built into every solution we deliver.',
             },
             {
-              icon: '⚡',
+              icon: 'zap',
               title: locale === 'ar' ? 'تسليم سريع' : 'Fast Delivery',
               desc: locale === 'ar'
                 ? 'منهجيات رشيقة تضمن التسليم في الوقت المحدد دون المساومة على الجودة.'
                 : 'Agile methodologies ensure on-time delivery without compromising on quality.',
             },
             {
-              icon: '📈',
+              icon: 'trending-up',
               title: locale === 'ar' ? 'نتائج قابلة للقياس' : 'Measurable Results',
               desc: locale === 'ar'
                 ? 'تقنية مدعومة بالبيانات وعائد استثمار قابل للقياس مع تقارير شفافة.'
@@ -156,7 +156,7 @@ export default function HomePage() {
             },
           ].map((item) => (
             <Card key={item.title} padding="lg" className="text-center">
-              <span className="text-4xl block mb-4">{item.icon}</span>
+              <Icon name={item.icon} size={40} className="text-primary-600 mb-4 mx-auto" />
               <h3 className="text-lg font-bold text-neutral-900">{item.title}</h3>
               <p className="mt-2 text-neutral-600">{item.desc}</p>
             </Card>
@@ -205,7 +205,7 @@ export default function HomePage() {
             <Link key={article.slug} href={`/blog/${article.slug}`}>
               <Card hover padding="none" className="h-full group overflow-hidden">
                 <div className="h-48 bg-gradient-to-br from-primary-100 to-primary-200 flex items-center justify-center">
-                  <span className="text-6xl opacity-50">📝</span>
+                  <Icon name="file-text" size={56} className="opacity-50 text-primary-600" />
                 </div>
                 <div className="p-6">
                   <Badge>{article.category[locale]}</Badge>

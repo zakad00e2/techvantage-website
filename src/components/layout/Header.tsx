@@ -11,6 +11,7 @@ import Image from 'next/image';
 import LanguageSwitcher from './LanguageSwitcher';
 import { siteConfig, type Locale } from '@/config/site';
 import { getServices } from '@/content/services';
+import { Icon } from '@/components/ui';
 
 export default function Header() {
   const t = useTranslations('nav');
@@ -44,22 +45,21 @@ export default function Header() {
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        scrolled
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled
           ? 'bg-white/95 backdrop-blur-lg shadow-md border-b border-neutral-100'
           : 'bg-white/80 backdrop-blur-sm'
-      }`}
+        }`}
     >
       <div className="mx-auto max-w-7xl px-7 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 md:h-20">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-1 group">
             <div className="relative w-10 h-10  flex items-center justify-center">
-              <div 
+              <div
                 className="absolute inset-0 bg-black"
                 style={{
                   maskImage: 'url("/logo.png")',
-                  maskSize: 'contain', 
+                  maskSize: 'contain',
                   maskRepeat: 'no-repeat',
                   maskPosition: 'center',
                   WebkitMaskImage: 'url("/logo.png")',
@@ -101,7 +101,7 @@ export default function Header() {
                           href={`/services/${service.slug}`}
                           className="flex items-start gap-3 p-3 rounded-xl hover:bg-primary-50 transition-colors group"
                         >
-                          <span className="text-2xl flex-shrink-0 mt-0.5">{service.icon}</span>
+                          <Icon name={service.icon} size={24} className="text-primary-600 flex-shrink-0 mt-0.5" />
                           <div>
                             <p className="font-semibold text-neutral-900 group-hover:text-primary-600 transition-colors">
                               {service.title[locale]}

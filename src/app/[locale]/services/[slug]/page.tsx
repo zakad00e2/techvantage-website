@@ -5,7 +5,7 @@
 import React from 'react';
 import { useTranslations, useLocale } from 'next-intl';
 import { Link } from '@/i18n/navigation';
-import { Section, SectionHeader, Card, Button } from '@/components/ui';
+import { Section, SectionHeader, Card, Button, Icon } from '@/components/ui';
 import { getServices, getServiceBySlug } from '@/content/services';
 import { notFound } from 'next/navigation';
 import type { Locale } from '@/config/site';
@@ -17,7 +17,7 @@ import type { Metadata } from 'next';
 export function generateStaticParams() {
   const services = getServices();
   const locales = ['ar', 'en'];
-  return locales.flatMap((locale) => 
+  return locales.flatMap((locale) =>
     services.map((service) => ({
       locale,
       slug: service.slug
@@ -76,7 +76,7 @@ function ServicePageContent({ service }: { service: NonNullable<ReturnType<typeo
             {t('allServices')}
           </Link>
           <div className="flex items-start gap-6">
-            <span className="text-6xl hidden md:block">{service.icon}</span>
+            <Icon name={service.icon} size={56} className="text-white/80 hidden md:block" />
             <div>
               <h1 className="text-4xl md:text-5xl font-extrabold">{service.title[locale]}</h1>
               <p className="mt-4 text-lg text-white/80 max-w-2xl">
@@ -141,7 +141,7 @@ function ServicePageContent({ service }: { service: NonNullable<ReturnType<typeo
           {allServices.slice(0, 3).map((s) => (
             <Link key={s.slug} href={`/services/${s.slug}`}>
               <Card hover padding="lg" className="h-full group">
-                <span className="text-3xl block mb-3">{s.icon}</span>
+                <Icon name={s.icon} size={32} className="text-primary-600 mb-3" />
                 <h3 className="text-lg font-bold text-neutral-900 group-hover:text-primary-600 transition-colors">
                   {s.title[locale]}
                 </h3>

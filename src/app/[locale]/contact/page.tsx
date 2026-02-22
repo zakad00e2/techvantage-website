@@ -4,7 +4,7 @@
  */
 import React from 'react';
 import { useTranslations, useLocale } from 'next-intl';
-import { Section, Card } from '@/components/ui';
+import { Section, Card, Icon } from '@/components/ui';
 import { siteConfig, type Locale } from '@/config/site';
 import type { Metadata } from 'next';
 import ContactForm from './ContactForm';
@@ -19,22 +19,22 @@ export default function ContactPage() {
 
   const contactInfo = [
     {
-      icon: '📍',
+      icon: 'map-pin',
       title: t('addressTitle'),
       content: siteConfig.contact.address[locale],
     },
     {
-      icon: '✉️',
+      icon: 'mail',
       title: t('emailTitle'),
       content: siteConfig.contact.email,
     },
     {
-      icon: '📞',
+      icon: 'phone',
       title: t('phoneTitle'),
       content: siteConfig.contact.phone,
     },
     {
-      icon: '🕐',
+      icon: 'clock',
       title: t('hoursTitle'),
       content: t('hoursText'),
     },
@@ -67,7 +67,7 @@ export default function ContactPage() {
             <div className="space-y-6">
               {contactInfo.map((info) => (
                 <Card key={info.title} padding="md" className="flex items-start gap-4">
-                  <span className="text-2xl flex-shrink-0">{info.icon}</span>
+                  <Icon name={info.icon} size={24} className="text-primary-600 flex-shrink-0" />
                   <div>
                     <h3 className="font-semibold text-neutral-900">{info.title}</h3>
                     <p className="text-neutral-600 mt-1">{info.content}</p>
@@ -79,7 +79,7 @@ export default function ContactPage() {
             {/* Map placeholder */}
             <div className="mt-8 rounded-2xl bg-neutral-100 border border-neutral-200 h-64 flex items-center justify-center">
               <div className="text-center text-neutral-500">
-                <span className="text-4xl block mb-2">🗺️</span>
+                <Icon name="map" size={40} className="text-neutral-400 mb-2" />
                 <p className="font-medium">{locale === 'ar' ? 'خريطة الموقع' : 'Location Map'}</p>
               </div>
             </div>
